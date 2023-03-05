@@ -54,6 +54,7 @@ my-react-app/
 ├── README.md
 └── ...
 
+
 Here's a brief overview of the different directories and files:
 
 # public/
