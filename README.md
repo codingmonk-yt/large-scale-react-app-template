@@ -1,58 +1,77 @@
-# large-scale-react-app-template
+                                         +-------------+
+                                        |   README.md |
+                                        +-------------+
+                                               |
+                                               |
+                                        +-------------+
+                                        | node_modules|
+                                        +-------------+
+                                               |
+                                               |
+                                        +-------------+
+                                        | package.json|
+                                        +-------------+
+                                               |
+                                               |
+                                        +-------------+
+                                        |    public   |
+                                        +-------------+
+                                        /   /      \   \
+                              +-------------+  +---------+  +-------------+
+                              | favicon.ico |  |index.html|  |manifest.json|
+                              +-------------+  +---------+  +-------------+
+                                               |
+                                               |
+                                        +-------------+
+                                        |     src     |
+                                        +-------------+
+                                        /   /    |    \   \
+                            +-------------+ +---------+ +-------+
+                            |     App.js  | |   ...   | |assets |
+                            +-------------+ +---------+ +-------+
+                                               |          / |    |     \
+                                               |         /  |    |      \
+                                        +--------+ +--------+  +-------+
+                                        | config | |  pages |  |utils  |
+                                        +--------+ +--------+  +-------+
+                                           /  | \    /   | \     / |   \
+                                          /   |  \  /    |  \   /  |    \
+                                         /    |   \/     |   \/   |     \
+                                   +--------+ +--------+ +--------+ +--------+
+                                   |  routes| |  Home  | |  About | |   ...  |
+                                   +--------+ +--------+ +--------+ +--------+
+                                        /          \            /           \
+                                       /            \          /             \
+                              +--------+      +--------+   +--------+      +-------+
+                              | store  |      |   ...  |   | hooks  |      |fonts  |
+                              +--------+      +--------+   +--------+      +-------+
+                            / /   |    \ \                / /    |   \ \     /  |   \
+                           / /    |     \ \              / /     |    \ \    /   |    \
+                          / /     |      \ \            / /      |     \ \  /    |     \
+                  +--------+ +--------+ +--------+ +--------+ +--------+ +--------+
+                  |actions | |reducers| |   ...   | |  ...   | |  ...   | |  images|
+                  +--------+ +--------+ +--------+ +--------+ +--------+ +--------+
 
 
-my-react-app/
-├── public/
-│   ├── index.html
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   ├── Header/
-│   │   │   ├── Header.jsx
-│   │   │   └── Header.css
-│   │   ├── Footer/
-│   │   │   ├── Footer.jsx
-│   │   │   └── Footer.css
-│   │   ├── HomePage/
-│   │   │   ├── HomePage.jsx
-│   │   │   └── HomePage.css
-│   │   └── ...
-│   ├── containers/
-│   │   ├── Main/
-│   │   │   ├── Main.jsx
-│   │   │   └── Main.css
-│   │   ├── User/
-│   │   │   ├── User.jsx
-│   │   │   └── User.css
-│   │   └── ...
-│   ├── routes/
-│   │   ├── AppRoutes.jsx
-│   │   ├── HomeRoutes.jsx
-│   │   ├── UserRoutes.jsx
-│   │   └── ...
-│   ├── services/
-│   │   ├── api.js
-│   │   └── ...
-│   ├── store/
-│   │   ├── actions/
-│   │   │   ├── types.js
-│   │   │   ├── authActions.js
-│   │   │   └── ...
-│   │   ├── reducers/
-│   │   │   ├── index.js
-│   │   │   ├── authReducer.js
-│   │   │   └── ...
-│   │   ├── store.js
-│   │   └── ...
-│   ├── utils/
-│   │   ├── helpers.js
-│   │   └── ...
-│   ├── App.jsx
-│   ├── index.jsx
-│   └── index.css
-├── package.json
-├── README.md
-└── ...
+
+              ┌───────────┐
+              │    src    │
+              └──────┬────┘
+                     │
+           ┌─────────┴─────────┐
+          ┌┴┐              ┌───┴───┐
+     assets components constants pages services store utils
+      ────┴─── ──────────┴──────────
+
+   ┌──┴─────┐  ┌─────┴─────┐  ┌────┴────┐  ┌────┴────┐  ┌────┴────┐
+fonts images styles components features layout ui api auth actions reducers selectors types index.ts
+         ┌──────┴───────┐
+         ├── components │
+         ├── pages      │
+         ├── services   │
+         └── store      │
+                       ┌─┴─┐
+                   utils hooks index.ts
 
 
 Here's a brief overview of the different directories and files:
@@ -105,9 +124,9 @@ Here's a flow diagram to give you an idea of how these different parts of the ap
             ┌─────────────────────┐
             │       App.jsx       │
             ├─────────────────────┤
-            │     Render Header    │
-            │     Render Router    │
-            │     Render Footer    │
+            │     Render Header   │
+            │     Render Router   │
+            │     Render Footer   │
             └─────────────────────┘
                       │
                       ▼
@@ -143,4 +162,5 @@ Here's a flow diagram to give you an idea of how these different parts of the ap
             │    Update State     │
             │  Based on Actions   │
             └─────────────────────┘
-
+            
+            
